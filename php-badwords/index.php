@@ -6,10 +6,10 @@
 <body>
     <form action="ricevi_dati.php" method="GET">
         <strong>Paragrafo:</strong>
-        <textarea id="paragrafo" name="paragrafo"></textarea><br>
+        <textarea id="paragrafo" name="paragraf"></textarea><br>
 
         <strong>Parola:</strong>
-        <input type="text" id="parola" name="parola"><br>
+        <input type="text" id="parola" name="badword"><br>
 
         <button type="submit">Invia</button>
     </form>
