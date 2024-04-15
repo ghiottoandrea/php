@@ -39,7 +39,59 @@ $hotels = [
     ],
 
 ];
-
+/*
 foreach ($hotels as $hotel) {
     echo $hotel['name'] . '<br>' . $hotel['description'] . '<br>' . $hotel['vote'] . '<br>' . $hotel['distance_to_center'] . '<hr>';
 }
+*/
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <?php foreach ($hotels as $hotel) : ?>
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card p-3 mt-3">
+                        <div>
+                            <strong>Nome:</strong>
+                            <span> <?= $hotel['name'] ?> </span>
+                        </div>
+
+                        <div>
+                            <strong>Descrizione:</strong>
+                            <span> <?= $hotel['description'] ?> </span>
+                        </div>
+
+                        <div>
+                            <strong>Voto:</strong>
+                            <span> <?= $hotel['vote'] ?> su 5 </span>
+                        </div>
+
+                        <div>
+                            <strong>Distanza dal centro:</strong>
+                            <span> <?= $hotel['distance_to_center'] ?>km </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <?php endforeach; ?>
+
+</body>
+
+</html>
